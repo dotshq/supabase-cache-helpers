@@ -17,6 +17,7 @@ export function useUpsertItem<Type extends Record<string, unknown>>(
 ) {
   const queryClient = useQueryClient();
   const getPostgrestFilter = usePostgrestFilterCache();
+  console.log("fucking hell");
 
   return async (input: Type) =>
     await upsertItem(
